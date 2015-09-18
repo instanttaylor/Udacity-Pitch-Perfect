@@ -35,10 +35,6 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knB-Gr-3z5">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="WL2-q1-Aic"/>
-                                            <constraint firstAttribute="width" constant="50" id="osG-NO-yYJ"/>
-                                        </constraints>
                                         <state key="normal" image="stop2x-iphone"/>
                                         <connections>
                                             <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c2H-i3-IzA"/>
@@ -46,10 +42,6 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfS-Eq-d3n">
                                         <rect key="frame" x="100" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="7Dv-Dl-lKy"/>
-                                            <constraint firstAttribute="width" constant="50" id="S7d-9I-mFC"/>
-                                        </constraints>
                                         <state key="normal" image="pause_80_blue"/>
                                         <connections>
                                             <action selector="pauseOrResumeRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kb5-D8-Pfz"/>
@@ -202,7 +194,7 @@
         <image name="echo" width="160" height="160"/>
         <image name="fast2x-iphone" width="100" height="100"/>
         <image name="microphone2x-iphone" width="100" height="100"/>
-        <image name="pause_80_blue" width="80" height="80"/>
+        <image name="pause_80_blue" width="50" height="50"/>
         <image name="reverb" width="160" height="160"/>
         <image name="slow2x-iphone" width="100" height="100"/>
         <image name="stop2x-iphone" width="50" height="50"/>
