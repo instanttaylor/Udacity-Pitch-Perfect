@@ -28,16 +28,10 @@ class Pitch_PerfectUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        
+    func recordingChangesLabel() {
         let app = XCUIApplication()
         app.buttons["microphone2x iphone"].tap()
-        app.buttons["stop2x iphone"].tap()
-        
-        app.navigationBars["Pitch_Perfect.PlaySoundsView"].buttons["Record"].tap()
-        
-        app.staticTexts["Recording..."].tap()
-        
+        XCTAssert(app.staticTexts["Recording..."].exists)
     }
     
 }
