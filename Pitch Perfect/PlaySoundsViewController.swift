@@ -37,12 +37,11 @@ class PlaySoundsViewController: UIViewController {
         audioPlayer.rate = 1.0
         audioPlayer.stop()
         audioEngine.stop()
+        audioEngine.reset()
     }
     
     func playAudioWithVariablePitch(pitch:Float) {
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        stopAndResetAudio()
         
         let audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -60,20 +59,23 @@ class PlaySoundsViewController: UIViewController {
         audioPlayerNode.play()
     }
     
+    func playAudioWithVariableSpeed(speed: Float) {
+        audioPlayer.rate = speed
+        audioPlayer.play()
+    }
+    
     @IBAction func stopAudio(sender: AnyObject) {
         stopAndResetAudio()
     }
 
     @IBAction func playSlowAudio(sender: AnyObject) {
         stopAndResetAudio()
-        audioPlayer.rate = 0.5
-        audioPlayer.play()
+        playAudioWithVariableSpeed(0.5)
     }
     
     @IBAction func playFastAudio(sender: AnyObject) {
         stopAndResetAudio()
-        audioPlayer.rate = 1.5
-        audioPlayer.play()
+        playAudioWithVariableSpeed(1.5)
     }
 
     @IBAction func playChipmunkAudio(sender: AnyObject) {
@@ -85,10 +87,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playEchoAudio(sender: AnyObject) {
-        print(sender.title)
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        stopAndResetAudio()
         
         let audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -109,10 +108,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playReverbAudio(sender: AnyObject) {
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
-        
+        stopAndResetAudio()
         let audioPlayerNode = AVAudioPlayerNode()
 
         audioEngine.attachNode(audioPlayerNode)

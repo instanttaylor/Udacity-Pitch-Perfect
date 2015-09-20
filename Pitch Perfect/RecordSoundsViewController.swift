@@ -43,6 +43,7 @@ class RecordSoundsViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
         loadRecordingSetup()
     }
 
